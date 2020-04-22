@@ -1,7 +1,7 @@
 import React from "react";
 import "./Card.css";
 
-function Card({caption, src, totalNum, currNum}) { // destructure props!
+function Card({caption, src, totalNum, currNum}) {
   return (
     <div className="Card">
       <h4 className="Card-title">{caption}</h4>

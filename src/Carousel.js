@@ -5,12 +5,16 @@ import image2 from "./image2.jpg";
 import image3 from "./image3.jpg";
 import Card from "./Card";
 
-function Carousel({cardData, title}) {  // destructure props!!
+function Carousel({cardData, title}) {
   const [cardIdx, setCardIdx] = useState(0);
   const card = cardData[cardIdx];
   const total = cardData.length;
-  const goForward = () => setCardIdx(cardIdx + 1);  // could be one function: 'go(step)'
+  const goForward = () => setCardIdx(cardIdx + 1);
   const goBackward = () => setCardIdx(cardIdx - 1);
+
+  // could be one function: 'go(step)' - refactor
+    // const go = (step) => setCardIdx(step);
+
   const leftArrowStyle = cardIdx === 0 ? {visibility:"hidden"} : {visibility:"visible"};
   const rightArrowStyle = cardIdx === 2 ? {visibility:"hidden"} : {visibility:"visible"};
 
